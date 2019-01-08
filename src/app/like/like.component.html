@@ -1,0 +1,25 @@
+
+
+<!-- <i 
+class="fa-heart"
+[class.fas]="isSelected"
+[class.far]="!isSelected"
+(click)="onClick()"
+>
+</i> -->
+<br>
+
+
+<div >
+  <i class="fas fa-heart" [class.abc]="isSelected" (click)="onClick()">
+  </i>
+  <span>{{count}}</span>
+</div>
+
+<br>
+
+<div>
+    <i class="fas fa-heart" [class.abc]="isLiked" (click)="onHeartClicked()">
+    </i>
+    <span>{{ likesCount }}</span>
+</div>

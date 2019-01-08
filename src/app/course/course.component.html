@@ -1,0 +1,8 @@
+<p>list of courses</p>
+<button (click)= "onAdd()">Add</button>
+<button (click)= "onRemove()">Remove</button>
+<ul>
+    <li *ngFor = "let course of courses; index as i">
+      {{ i }} - {{ course.name }}
+    </li>
+</ul>

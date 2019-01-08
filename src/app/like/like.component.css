@@ -1,0 +1,19 @@
+i {
+font-size: 3em;
+}
+
+.fa-heart {
+    color: #ccc;
+}
+
+.fa-heart.abc {
+    color: deeppink;
+}
+i {
+    cursor: pointer;
+}
+
+span {
+    font-size: 3em;
+    color: black; 
+}
