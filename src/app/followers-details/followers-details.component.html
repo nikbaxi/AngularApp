@@ -1,0 +1,41 @@
+<h1>Mosh - hamedani</h1>
+<h6>- followers list</h6>
+<p>Create Post</p>
+<form #followerForm="ngForm" (ngSubmit)="addFollower(followerForm)" method="post">
+  <td class="form-group">
+    <tr>
+      <label>Name:
+      <input type="text" 
+        name="login" 
+        ngModel 
+        class="form-control"
+        required>
+      </label>
+    </tr>
+    <tr>
+      <label>Email:
+      <input type="text" name="html_url" ngModel class="form-control">
+      </label>
+    </tr>
+    <tr><input class="btn btn-primary" [disabled]="!followerForm.valid" type="submit" ></tr>
+  </td>
+</form>
+
+
+
+<div class="row" *ngFor="let follower of followers; index as $i">
+  <div class="column"><img src="{{follower.avatar_url}}" alt=""></div>
+  <div class="column">
+    <ul>
+      <li>{{ $i }}</li>
+      <li>{{follower.login}}</li>
+      <li>{{follower.html_url}}</li>
+    </ul>
+  </div>
+  <div class="column">
+    <ul>
+      <li> <input type="button" value="Delete" (click)="deleteFollower(follower)"> </li>
+      <li> <input type="button" value="Update" (click)="updateFollower(follower)"> </li>
+    </ul>
+  </div>
+</div>
